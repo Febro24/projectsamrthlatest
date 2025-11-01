@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth - Agriculture & Climate Q&A</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-seedling"></i>
+                    <h1>Project Samarth</h1>
+                </div>
+                <p class="subtitle">Intelligent Q&A System for India's Agriculture & Climate Data</p>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <div class="avatar bot-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-text">
+                            <p>👋 Hello! I'm Samarth, your agriculture and climate assistant. I can help you with questions about:</p>
+                            <ul>
+                                <li>🌧️ Rainfall comparisons between states</li>
+                                <li>🌾 Top crops in different regions</li>
+                                <li>📈 Production trends over years</li>
+                                <li>📊 State-wise statistics</li>
+                            </ul>
+                            <p>Try asking: <em>"Compare rainfall in Maharashtra and Kerala for last 5 years"</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        placeholder="Ask your question about Indian agriculture or climate..."
+                        autocomplete="off"
+                    >
+                    <button id="sendButton" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="examples-container" id="examplesContainer">
+                    <span class="examples-label">Quick examples:</span>
+                    <div class="example-chips">
+                        <span class="example-chip">Compare rainfall in Maharashtra and Gujarat</span>
+                        <span class="example-chip">Top crops in Punjab</span>
+                        <span class="example-chip">Rice production trend in Tamil Nadu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <a href="https://data.gov.in" target="_blank">data.gov.in</a> | IMD Rainfall Data & Ministry of Agriculture</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
